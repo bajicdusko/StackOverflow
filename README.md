@@ -1,40 +1,23 @@
-# Kotlin AndroidStarterKit
+# Simple StackOverflow
 
-Kotlin AndroidStarterKit is a functional copy of [AndroidStarterKit](https://github.com/bajicdusko/Android-Starter-Kit) 
-repository, written in Kotlin. As Java version of this repository, its purpose is to be used when starting new android project
-and having prepared project architecture and the core collection of the libraries used in almost every app.
+### Description 
+This application is intended to be used as part of openclassrooms course available on this URL. 
+It is a working solution for loading the StackOverflow questions tagged with `android` into the list.
 
-Project is organized with **Clean Architecture** and **MVP Pattern** in mind, separated to four modules: 
-* app
-* presentation
-* data
-* domain
+### Goal
+Appliacation is already loading the questions into the list and opens the Browser in order to read the questiond details and answers. This app has to be extended with the new screen which shows the question details and all answers in the list. 
+With the work made on this app, you should handle the Retrofit setup for the `AnswersAPI`, create a Kotlin data classes representing the models and load the answers as list. Also, a questions details should be shown as well.
+Each answer should have a owner avatar displayed as shown in the mockup below.
 
-Libraries included in this project are listed below:
+All required details related to the API can be found in the documentation of StackExchange API: https://api.stackexchange.com/docs. Implementation details can be found in the project itself.
 
-Common
-- [![RxKotlin](https://img.shields.io/badge/RxJava2-2.0.3-green.svg)](https://github.com/ReactiveX/RxKotlin)
-- [![RxAndroid2](https://img.shields.io/badge/RxAndroid2-2.0.1-green.svg)](https://github.com/ReactiveX/RxAndroid)
-- [![Dagger2](https://img.shields.io/badge/Dagger2-2.13-green.svg)](https://github.com/google/dagger)
-- [![JodaTime](https://img.shields.io/badge/JodaTime-2.9.9-green.svg)](https://github.com/JodaOrg/joda-time)
-- [![Timber](https://img.shields.io/badge/Timber-4.5.1-green.svg)](https://github.com/JakeWharton/timber)
-- [![LeakCannary](https://img.shields.io/badge/LeakCannary-1.5.1-green.svg)](https://github.com/square/leakcanary) (not yet included)
-- [![Parceler](https://img.shields.io/badge/Parceler-1.1.9-green.svg)](https://github.com/johncarl81/parceler)
+**Fork this repository and push your woring solution onto your branch. 
+Pull requests to this repository wont be accepted.**
 
-Network
-- [![Retrofit2](https://img.shields.io/badge/Retrofit-2.3.0-green.svg)](https://github.com/square/retrofit)
-- [![Gson](https://img.shields.io/badge/Gson-2.8.2-green.svg)](https://github.com/google/gson)
-- [![OkHttp3](https://img.shields.io/badge/OkHttp3-3.8.1-green.svg)](https://github.com/square/okhttp)
+_todo: add a mockup_
 
-View
-- [![RxBinding](https://img.shields.io/badge/RxBinding-2.0.0-green.svg)](https://github.com/JakeWharton/RxBinding)
-- [![ButterKnife](https://img.shields.io/badge/ButterKnife-8.8.1-green.svg)](https://github.com/JakeWharton/butterknife)
-- [![PermissionDispatcher](https://img.shields.io/badge/PermissionDispatcher-2.3.2-green.svg)](https://github.com/hotchemi/PermissionsDispatcher) (not yet included)
-- [![ConstraintLayout](https://img.shields.io/badge/ConstraintLayout-1.0.2-green.svg)](https://developer.android.com/training/constraint-layout/index.html)
+### MVP Architecture
+Application is developed in MVP architecture in mind with heavy usage of RxJava. Specific operations with RxJava aren't required. By following the example with questions loading, it is possible to implement the same logic for the answers loading as well.
+Although, the RxJava is part of the course this project belongs to, implementation related to RxJava won't be evaluated due to its complexity. 
+This project doesn't use architecture components like Room, LiveData or ViewModel. However, this project is organized in MVP architecture and its architecture should be followed in the future implementations as well.
 
-Testing
-- [![Mockito](https://img.shields.io/badge/Mockito-2.12.0-green.svg)](https://github.com/mockito/mockito)
-- [![Robolectric](https://img.shields.io/badge/Robolectric-3.3.2-green.svg)](https://github.com/robolectric/robolectric) (not yet included)
-
-Crash Reports
-- [![Crashlytics](https://img.shields.io/badge/Crashlytics-2.6.8-green.svg)](https://fabric.io/kits/android/crashlytics)
