@@ -1,4 +1,4 @@
-package com.bajicdusko.kotlinstarterkit.data;
+package com.bajicdusko.stackoverflow.data;
 
 import org.junit.Test;
 

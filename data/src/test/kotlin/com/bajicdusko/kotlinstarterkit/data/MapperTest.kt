@@ -11,7 +11,7 @@ import org.junit.runner.RunWith
 import org.mockito.junit.MockitoJUnitRunner
 
 /**
- * Created by Dusko Bajic on 11.06.17.
+ * Created by Dusko Bajic
  * GitHub @bajicdusko
  */
 

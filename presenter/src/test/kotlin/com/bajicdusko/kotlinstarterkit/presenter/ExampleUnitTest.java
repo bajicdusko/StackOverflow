@@ -1,4 +1,4 @@
-package com.bajicdusko.kotlinstarterkit.presenter;
+package com.bajicdusko.stackoverflow.presenter;
 
 import org.junit.Test;
 

@@ -5,7 +5,7 @@
     android:orientation="vertical"
     >
 
-  <com.bajicdusko.kotlinstarterkit.ui.view.DefaultRecyclerView
+  <com.bajicdusko.stackoverflow.ui.view.DefaultRecyclerView
       android:id="@+id/fragment_question_rv_main"
       android:layout_width="match_parent"
       android:layout_height="match_parent"

@@ -1,0 +1,43 @@
+package com.bajicdusko.stackoverflow.data.repository
+
+import android.content.SharedPreferences
+import com.bajicdusko.stackoverflow.data.save
+import com.bajicdusko.stackoverflow.domain.EMPTY_STRING
+import com.bajicdusko.stackoverflow.domain.repository.CacheRepository
+import com.google.gson.Gson
+
+/**
+ * Created by Dusko Bajic
+ * GitHub @bajicdusko
+ */
+class CacheRepositoryData(val sharedPreferences: SharedPreferences, val gson: Gson) : CacheRepository {
+
+  private val KEY_USERNAME = "key_username"
+  private val KEY_PASSWORD = "key_password"
+  private val KEY_SIDEBAR_SHOWN = "key_sidebar_shown"
+
+  override var username: String
+    get() = sharedPreferences.getString(KEY_USERNAME, EMPTY_STRING)
+    set(value) {
+      sharedPreferences.save(KEY_USERNAME, value)
+    }
+  override var password: String
+    get() = sharedPreferences.getString(KEY_PASSWORD, EMPTY_STRING)
+    set(value) {
+      sharedPreferences.save(KEY_PASSWORD, value)
+    }
+
+  override fun isSidebarShown(): Boolean {
+    var isSidebarShown = sharedPreferences.getBoolean(KEY_SIDEBAR_SHOWN, false)
+    if (!isSidebarShown) {
+      sharedPreferences.save(KEY_SIDEBAR_SHOWN, true)
+    }
+    return isSidebarShown
+  }
+
+  override fun isLoggedIn(): Boolean = username.isNotEmpty() && password.isNotEmpty()
+
+  override fun clear() {
+    sharedPreferences.edit().clear()
+  }
+}
